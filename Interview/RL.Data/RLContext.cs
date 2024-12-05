@@ -10,10 +10,13 @@ public class RLContext : DbContext
     public DbSet<Procedure> Procedures { get; set; }
     public DbSet<User> Users { get; set; }
 
+    public DbSet<PlanProcedureUser> PlanProcedureUsers { get; set; }
+
+
     public RLContext() { }
     public RLContext(DbContextOptions<RLContext> options) : base(options) { }
 
-    protected override async void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
 

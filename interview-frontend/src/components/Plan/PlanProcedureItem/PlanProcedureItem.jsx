@@ -11,7 +11,7 @@ const PlanProcedureItem = ({ procedure, users }) => {
 
     for (const userId of userIds) {
       try {
-        await assignUserToPlanProcedure(procedure.id, userId); // Ensure 'procedure.id' is correct
+        await assignUserToPlanProcedure(procedure.procedureId, userId);
         console.log(
           `User ${userId} assigned to procedure ${procedure.procedureTitle}`
         );
